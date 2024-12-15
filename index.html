@@ -1,36 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Universe League Lineup Maker</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+<div class="formation-container">
     <h1>Universe League Lineup Maker</h1>
+
+    <!-- Formation Field (with field.png background) -->
     <div class="formation-grid">
-        <div class="drop-zone" data-position="Leader"></div>
-        <div class="drop-zone" data-position="Center"></div>
-        <div class="drop-zone" data-position="Main Dancer"></div>
-        <div class="drop-zone" data-position="Main Vocalist"></div>
-        <div class="drop-zone" data-position="Main Rapper"></div>
-        <div class="drop-zone" data-position="Visual"></div>
+        <div class="drop-zone" data-position="Leader"><p>Leader</p></div>
+        <div class="drop-zone" data-position="Center"><p>Center</p></div>
+        <div class="drop-zone" data-position="Main Dancer"><p>Main Dancer</p></div>
+        <div class="drop-zone" data-position="Main Vocalist"><p>Main Vocalist</p></div>
+        <div class="drop-zone" data-position="Main Rapper"><p>Main Rapper</p></div>
+        <div class="drop-zone" data-position="Visual"><p>Visual</p></div>
     </div>
-    <div class="player-pool">
-        <div class="player-card" id="player1" draggable="true">
-            <img src="assets/player1.png"
-            <p>Player 1</p>
-        </div>
-        <div class="player-card" id="player2" draggable="true">
-            <img src="assets/player2.png"
-            <p>Player 2</p>
-        </div>
-        <div class="player-card" id="player3" draggable="true">
-            <img src="assets/player3.png"
-            <p>Player 3</p>
-        </div>
+
+    <!-- Scrollable Player Table -->
+    <div class="scrollable-table">
+        <table id="player-table">
+            <thead>
+                <tr class="table-header">
+                    <th>Name</th>
+                    <th>Position</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="player-card" id="player1" draggable="true">
+                    <td>Player 1</td>
+                    <td>Center</td>
+                </tr>
+                <tr class="player-card" id="player2" draggable="true">
+                    <td>Player 2</td>
+                    <td>Main Dancer</td>
+                </tr>
+                <tr class="player-card" id="player3" draggable="true">
+                    <td>Player 3</td>
+                    <td>Leader</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-    <button id="save-button">Save Lineup</button>
-    <script src="scripts.js"></script>
-</body>
-</html>
+</div>
