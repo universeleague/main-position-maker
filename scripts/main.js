@@ -111,7 +111,7 @@ function newTrainee() {
 // Constructor for a blank ranking list
 function newRanking() {
   // holds the ordered list of rankings that the user selects
-  let ranking = new Array(7);
+  let ranking = new Array(6);
   for (let i = 0; i < ranking.length; i++) {
     ranking[i] = newTrainee();
   }
@@ -182,7 +182,6 @@ function populateTableEntry(trainee) {
   <div class="table__entry ${eliminated}">
     <div class="table__entry-icon">
       <img class="table__entry-img" src="assets/trainees/${trainee.image}" />
-      <div class="table__entry-icon-border ${trainee.grade.toLowerCase()}-rank-border"></div>
       ${
         top9 ? '<div class="table__entry-icon-crown"></div>' : ''
       }
@@ -257,16 +256,13 @@ function populateRankingEntry(trainee, currRank) {
     <div class="ranking__entry-view">
       <div class="ranking__entry-icon">
         <img class="ranking__entry-img" src="assets/trainees/${trainee.image}" />
-        <div class="ranking__entry-icon-border ${trainee.grade.toLowerCase()}-rank-border" data-rankid="${currRank-1}"></div>
       </div>
-      <div class="ranking__entry-icon-badge bg-${trainee.grade.toLowerCase()}">${currRank}</div>
       ${
         top9 ? '<div class="ranking__entry-icon-crown"></div>' : ''
       }
     </div>
     <div class="ranking__row-text">
       <div class="name"><strong>${trainee.name_romanized}</strong></div>
-      <div class="company">${modifiedCompany}</div>
     </div>
   </div>`;
   return rankingEntry;
@@ -361,7 +357,7 @@ function removeRankedTrainee(trainee) {
   return false;
 }
 
-const currentURL = "https://universeleague.github.io/";
+const currentURL = "https://universeleague.github.io/main-position-maker/";
 // Serializes the ranking into a string and appends that to the current URL
 function generateShareLink() {
   let shareCode = ranking.map(function (trainee) {
@@ -393,7 +389,7 @@ var trainees = [];
 var filteredTrainees = [];
 // holds the ordered list of rankings that the user selects
 var ranking = newRanking();
-const rowNums = [1, 2, 4];
+const rowNums = [1, 2, 2, 1];
 //window.addEventListener("load", function () {
   populateRanking();
   readFromCSV("./trainee_info.csv");
