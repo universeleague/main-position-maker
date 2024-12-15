@@ -1,0 +1,85 @@
+/* Reset margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic body styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+/* The soccer field container */
+.field-container {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    background-color: #3c9d32; /* Green field */
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+/* Goal lines */
+.goal-line {
+    position: absolute;
+    background-color: white;
+    height: 5%;
+    width: 100%;
+}
+
+.goal-line.left {
+    top: 0;
+    left: 0;
+}
+
+.goal-line.right {
+    bottom: 0;
+    left: 0;
+}
+
+/* Penalty areas */
+.penalty-area {
+    position: absolute;
+    background-color: white;
+    height: 15%;
+    width: 10%;
+    border: 2px solid white;
+}
+
+.penalty-area.left {
+    top: 10%;
+    left: 0;
+}
+
+.penalty-area.right {
+    top: 10%;
+    right: 0;
+}
+
+/* Center circle */
+.center-circle {
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    border: 2px solid white;
+    border-radius: 50%;
+    top: 40%;
+    left: 40%;
+}
+
+/* Center spot */
+.center-spot {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
