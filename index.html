@@ -1,39 +1,50 @@
-<div class="formation-container">
-    <h1>Universe League Lineup Maker</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Universe League Lineup Maker</title>
+  <link rel="icon" type="image/png" href="assets/logo_white.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="top-banner">
+    <img id="banner-image" src="assets/logo_white.png" alt="Logo"/>
+    <p id="banner-title">UNIVERSE LEAGUE RANKER</p>
+    <p id="banner-subtitle">Choose your main positions!</p>
+  </div>
 
-    <!-- Formation Field (with field.png background) -->
-    <div class="formation-grid">
-        <div class="drop-zone" data-position="Leader"><p>Leader</p></div>
-        <div class="drop-zone" data-position="Center"><p>Center</p></div>
-        <div class="drop-zone" data-position="Main Dancer"><p>Main Dancer</p></div>
-        <div class="drop-zone" data-position="Main Vocalist"><p>Main Vocalist</p></div>
-        <div class="drop-zone" data-position="Main Rapper"><p>Main Rapper</p></div>
-        <div class="drop-zone" data-position="Visual"><p>Visual</p></div>
+  <div class="flex-container padded-box">
+    <div>
+      <div id="tooltip-container">
+        <!-- Tooltip or info can go here -->
+      </div>
+
+      <!-- Table to show player cards -->
+      <div id="table">
+        <div id="table__filter-container">
+          <input id="table__filter-input" oninput="filterTrainees(event)" type="text" placeholder="Search" />
+        </div>
+        <div id="table__entry-container">
+          <!-- Dynamically populated with player cards -->
+        </div>
+      </div>
     </div>
 
-    <!-- Scrollable Player Table -->
-    <div class="scrollable-table">
-        <table id="player-table">
-            <thead>
-                <tr class="table-header">
-                    <th>Name</th>
-                    <th>Position</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="player-card" id="player1" draggable="true">
-                    <td>Player 1</td>
-                    <td>Center</td>
-                </tr>
-                <tr class="player-card" id="player2" draggable="true">
-                    <td>Player 2</td>
-                    <td>Main Dancer</td>
-                </tr>
-                <tr class="player-card" id="player3" draggable="true">
-                    <td>Player 3</td>
-                    <td>Leader</td>
-                </tr>
-            </tbody>
-        </table>
+    <!-- Drag-and-drop formation -->
+    <div id="ranking__formation">
+      <div id="ranking__title"><strong>LINEUP</strong></div>
+      <div class="ranking__row">
+        <!-- Drop zones for positions like Leader, Center, Main Vocalist, etc. -->
+      </div>
+      <div class="ranking__row"></div>
+      <div class="ranking__row"></div>
     </div>
-</div>
+  </div>
+
+  <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+
+  <script src="script.js"></script>
+</body>
+</html>
