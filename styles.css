@@ -245,8 +245,8 @@ body {
 }
 .ranking__entry-view {
   position: relative;
-  width: 60px;
-  height: 60px;
+  width: 85.68px;
+  height: 120px;
   margin: 10px 24px 8px 24px;
 }
 .ranking__entry-icon {
@@ -271,14 +271,6 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 11px;
   text-align: center;
-}
-
-.ranking__entry .company {
-  color: var(--ranking-affil-gray);
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
-  font-size: 9px;
-  letter-spacing: 0.2px;
 }
 
 /* Generic Styles */
