@@ -2,12 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Universe League Lineup Maker</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0">
+  <title>Universe League Ranker</title>
   <link rel="icon" type="image/png" href="assets/logo_white.png">
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto+Condensed:400,700" rel="stylesheet">
 </head>
 <body>
+
   <div id="top-banner">
     <img id="banner-image" src="assets/logo_white.png" alt="Logo"/>
     <p id="banner-title">UNIVERSE LEAGUE RANKER</p>
@@ -17,29 +20,48 @@
   <div class="flex-container padded-box">
     <div>
       <div id="tooltip-container">
-        <!-- Tooltip or info can go here -->
+        <!-- Add tooltip FAQ stuff here -->
       </div>
-
-      <!-- Table to show player cards -->
       <div id="table">
         <div id="table__entry-container">
-          <!-- Dynamically populated with player cards -->
+          <!-- Player cards will be dynamically added here -->
         </div>
       </div>
+    </div>
 
-    <!-- Drag-and-drop formation -->
     <div id="ranking__formation">
       <div id="ranking__title"><strong>LINEUP</strong></div>
       <div class="ranking__row">
-        <!-- Drop zones for positions like Leader, Center, Main Vocalist, etc. -->
+        <div class="ranking__entry" id="leader">
+          <div class="ranking__entry-text">Leader</div>
+        </div>
       </div>
-      <div class="ranking__row"></div>
-      <div class="ranking__row"></div>
+      <div class="ranking__row">
+        <div class="ranking__entry" id="center-left">
+          <div class="ranking__entry-text">Center</div>
+        </div>
+        <div class="ranking__entry" id="center-right">
+          <div class="ranking__entry-text">Center</div>
+        </div>
+      </div>
+      <div class="ranking__row">
+        <div class="ranking__entry" id="main-dancer-left">
+          <div class="ranking__entry-text">Main Dancer</div>
+        </div>
+        <div class="ranking__entry" id="main-dancer-right">
+          <div class="ranking__entry-text">Main Dancer</div>
+        </div>
+      </div>
+      <div class="ranking__row">
+        <div class="ranking__entry" id="main-vocalist">
+          <div class="ranking__entry-text">Main Vocalist</div>
+        </div>
+        <div class="ranking__entry" id="main-rapper">
+          <div class="ranking__entry-text">Main Rapper</div>
+        </div>
+      </div>
     </div>
   </div>
-
-  <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 
   <script src="script.js"></script>
 </body>
