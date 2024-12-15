@@ -64,8 +64,8 @@ body {
 /* Center circle */
 .center-circle {
     position: absolute;
-    width: 20%;
-    height: 20%;
+    width: 20px;
+    height: 20px;
     border: 2px solid white;
     border-radius: 50%;
     top: 40%;
