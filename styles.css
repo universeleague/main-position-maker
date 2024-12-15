@@ -62,9 +62,9 @@ body {
 
 /* Styles for table */
 #table {
-  height: 40vh;
-  min-height: 350px;
-  width: 300px;
+  height: 120vh;
+  min-height: 500px;
+  width: 420px;
   box-shadow: 0px 2px 4px 0.1px var(--produce-gray);
   border-radius: 8px;
   border: 1px solid var(--produce-gray);
@@ -164,9 +164,9 @@ body {
   background-color: #f0f0f0;
 }
 .table__entry-icon {
-  border-radius: 4px;
-  width: 42.84px;
-  height: 60px;
+  border-radius: 8px;
+  width: 85.68px;
+  height: 120px;
   margin: 6px 8px;
   display: block;
   box-sizing: border-box;
@@ -175,9 +175,9 @@ body {
   background-size: 60px; */
 }
 .table__entry-img {
+  border-radius: 8px%;
   width: inherit;
   height: inherit;
-  border-radius: 4px;
 }
 .eliminated .table__entry-img {
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
@@ -190,21 +190,14 @@ body {
   left: 0;
   width: inherit;
   height: inherit;
+  border-radius: 8px;
   /* blue background */
   background-color: var(--checked-blue);
   /* the padding insets the checkbox (makes it bigger/smaller) */
   padding: 10px;
   box-sizing: border-box;
 }
-.table__entry-icon-border {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: inherit;
-  height: inherit;
 
-  box-sizing: border-box;
-}
 .table__entry-icon-crown, .ranking__entry-icon-crown {
   position: absolute;
   padding: 2px;
@@ -224,6 +217,7 @@ body {
   background-origin: content-box;
 }
 
+
 .table__entry-text {
   margin: auto 5px auto 5px;
   /* margin: auto auto; */
@@ -231,85 +225,15 @@ body {
 .table__entry-text .name {
   font-size: 12px;
   color: var(--name-gray);
+}
 
 /* Ranking Styles */
 #ranking__pyramid {
-  min-width: 350px;
+  /* min-width: 350px; */
   margin: 40px 40px 10px 40px;
   display: flex;
   flex-direction: column;
-  background-color: #3c9d32; /* Field background color */
-  position: relative;
-  border-radius: 10px;
-  padding: 40px;
-  box-sizing: border-box;
-  background-image: linear-gradient(180deg, #4eab3b 20%, #3c9d32 100%);
 }
-#ranking__pyramid::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 2px solid white; /* Border for the field */
-  border-radius: 10px;
-}
-
-#ranking__pyramid .field-line {
-  position: absolute;
-  background-color: white;
-}
-
-#ranking__pyramid .goal-line {
-  top: 10%;
-  left: 0;
-  width: 100%;
-  height: 5%;
-}
-
-#ranking__pyramid .center-circle {
-  width: 15%;
-  height: 15%;
-  border-radius: 50%;
-  border: 2px solid white;
-  top: 42.5%;
-  left: 42.5%;
-}
-
-#ranking__pyramid .center-spot {
-  width: 6px;
-  height: 6px;
-  background-color: white;
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#ranking__pyramid .penalty-area {
-  top: 10%;
-  width: 10%;
-  height: 15%;
-  border: 2px solid white;
-}
-
-#ranking__pyramid .half-line {
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 2px;
-}
-
-#ranking__title {
-  text-align: center;
-  font-size: 24px;
-  color: white;
-  margin-bottom: 20px;
-  position: relative;
-  z-index: 2;
-}
-	
 #ranking__title {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
@@ -321,13 +245,12 @@ body {
 }
 .ranking__entry-view {
   position: relative;
-  width: 42.84px;
+  width: 60px;
   height: 60px;
-  border-radius: 4px;
   margin: 10px 24px 8px 24px;
 }
 .ranking__entry-icon {
-  border-radius: 50%;
+  border-radius: 4px;
   width: inherit;
   height: inherit;
   display: inline-block;
@@ -335,7 +258,7 @@ body {
   position: relative;
 }
 .ranking__entry-img {
-  border-radius: 50%;
+  border-radius: 4px;
   width: inherit;
   height: inherit;
 }
@@ -343,54 +266,19 @@ body {
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
 }
-.ranking__entry-icon-badge {
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  left: 0;
-  right: 0;
-  bottom: -5px;
-  margin: auto;
-  border-radius: 50%;
-  background-color: #525259;
-  box-sizing: border-box;
-  padding: 2px;
-  /* badge text options */
-  font-weight: 900;
-  font-size: 8px;
-  text-align: center;
-  color: white;
-}
+
 .ranking__row-text {
   font-family: 'Open Sans', sans-serif;
   font-size: 11px;
   text-align: center;
 }
 
-
-/* Styles for different badge colors */
-.bg-no {
-  background-color: var(--no-rank);
-}
-.bg-r {
-  background-color: var(--r-rank);
-}
-.bg-g {
-  background-color: var(--g-rank);
-}
-.bg-b {
-  background-color: var(--b-rank);
-}
-.bg-d {
-  background-color: var(--d-rank);
-}
-.bg-f {
-  background-color: var(--f-rank);
-}
-.eliminated .ranking__entry-icon-badge {
-  background-color: var(--no-rank);
-}
-
+.ranking__entry .company {
+  color: var(--ranking-affil-gray);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 9px;
+  letter-spacing: 0.2px;
 }
 
 /* Generic Styles */
