@@ -17,8 +17,8 @@ body {
 /* The soccer field container */
 .field-container {
     position: relative;
-    width: 600px;
-    height: 400px;
+    width: 400px;  /* Width is now smaller for vertical layout */
+    height: 600px; /* Height is now larger for vertical layout */
     background-color: #3c9d32; /* Green field */
     border: 2px solid white;
     border-radius: 10px;
@@ -28,16 +28,16 @@ body {
 .goal-line {
     position: absolute;
     background-color: white;
-    height: 5%;
     width: 100%;
+    height: 5%;
 }
 
-.goal-line.left {
+.goal-line.top {
     top: 0;
     left: 0;
 }
 
-.goal-line.right {
+.goal-line.bottom {
     bottom: 0;
     left: 0;
 }
@@ -46,19 +46,19 @@ body {
 .penalty-area {
     position: absolute;
     background-color: white;
-    height: 15%;
     width: 10%;
+    height: 15%;
     border: 2px solid white;
 }
 
-.penalty-area.left {
+.penalty-area.top {
     top: 10%;
     left: 0;
 }
 
-.penalty-area.right {
-    top: 10%;
-    right: 0;
+.penalty-area.bottom {
+    bottom: 10%;
+    left: 0;
 }
 
 /* Center circle */
