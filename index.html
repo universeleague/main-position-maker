@@ -1,68 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0">
-  <title>Universe League Ranker</title>
+  <title>Universe League Formation Maker</title>
+  <meta name="viewport" content="initial-scale = 2.0, maximum-scale=1.0" />
   <link rel="icon" type="image/png" href="assets/logo_white.png">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto+Condensed:400,700" rel="stylesheet">
 </head>
 <body>
-
   <div id="top-banner">
-    <img id="banner-image" src="assets/logo_white.png" alt="Logo"/>
-    <p id="banner-title">UNIVERSE LEAGUE RANKER</p>
-    <p id="banner-subtitle">Choose your main positions!</p>
+    <img id="banner-image" src="assets/logo_white.png"/>
+    <p id="banner-title">UNIVERSE LEAGUE FORMATION MAKER</p>
+    <p id="banner-subtitle">Choose your top trainees!</p>
   </div>
-
   <div class="flex-container padded-box">
-    <div>
-      <div id="tooltip-container">
-        <!-- Add tooltip FAQ stuff here -->
-      </div>
-      <div id="table">
-        <div id="table__entry-container">
-          <!-- Player cards will be dynamically added here -->
-        </div>
+    <div id="formation-container">
+      <div id="formation-field-container">
+        <img src="assets/field.png" id="formation-field" alt="Formation Field" />
+        <!-- Positioning each trainee here -->
+        <div id="leader" class="formation-position">Leader</div>
+        <div id="main-vocal" class="formation-position">Main Vocal</div>
+        <div id="main-rapper" class="formation-position">Main Rapper</div>
+        <div id="main-dancer" class="formation-position">Main Dancer</div>
+        <div id="visual" class="formation-position">Visual</div>
+        <div id="center" class="formation-position">Center</div>
       </div>
     </div>
 
-    <div id="ranking__formation">
-      <div id="ranking__title"><strong>LINEUP</strong></div>
-      <div class="ranking__row">
-        <div class="ranking__entry" id="leader">
-          <div class="ranking__entry-text">Leader</div>
+    <div class="flex-container">
+      <div id="table">
+        <div id="table__filter-container">
+          <input id="table__filter-input" oninput="filterTrainees(event)" type="text" placeholder="Search"/>
         </div>
-      </div>
-      <div class="ranking__row">
-        <div class="ranking__entry" id="center-left">
-          <div class="ranking__entry-text">Center</div>
-        </div>
-        <div class="ranking__entry" id="center-right">
-          <div class="ranking__entry-text">Center</div>
-        </div>
-      </div>
-      <div class="ranking__row">
-        <div class="ranking__entry" id="main-dancer-left">
-          <div class="ranking__entry-text">Main Dancer</div>
-        </div>
-        <div class="ranking__entry" id="main-dancer-right">
-          <div class="ranking__entry-text">Main Dancer</div>
-        </div>
-      </div>
-      <div class="ranking__row">
-        <div class="ranking__entry" id="main-vocalist">
-          <div class="ranking__entry-text">Main Vocalist</div>
-        </div>
-        <div class="ranking__entry" id="main-rapper">
-          <div class="ranking__entry-text">Main Rapper</div>
+        <div id="table__entry-container">
+          <!-- Trainee cards dynamically populated here -->
         </div>
       </div>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="scripts/dragdrop.js"></script>
+  <script src="scripts/trainee-formation.js"></script>
 </body>
 </html>
