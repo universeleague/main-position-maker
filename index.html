@@ -3,27 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soccer Field Layout</title>
+    <title>Universe League Formation Maker</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- The soccer field -->
-    <div class="field-container">
-        <!-- Goal lines -->
-        <div class="goal-line top"></div>
-        <div class="goal-line bottom"></div>
-
-        <!-- Penalty areas -->
-        <div class="penalty-area top"></div>
-        <div class="penalty-area bottom"></div>
-
-        <!-- Center circle -->
-        <div class="center-circle"></div>
-
-        <!-- Center spot -->
-        <div class="center-spot"></div>
+    <!-- Ranker Container -->
+    <div class="ranker-container">
+        <!-- Each position container -->
+        <div class="position" id="leader">
+            <h3>Leader</h3>
+            <div class="card-container" id="leader-card"></div>
+        </div>
+        <div class="position" id="center">
+            <h3>Center</h3>
+            <div class="card-container" id="center-card"></div>
+        </div>
+        <div class="position" id="all-rounder">
+            <h3>All Rounder</h3>
+            <div class="card-container" id="all-rounder-card"></div>
+        </div>
+        <div class="position" id="main-dancer">
+            <h3>Main Dancer</h3>
+            <div class="card-container" id="main-dancer-card"></div>
+        </div>
+        <div class="position" id="main-rapper">
+            <h3>Main Rapper</h3>
+            <div class="card-container" id="main-rapper-card"></div>
+        </div>
+        <div class="position" id="main-vocal">
+            <h3>Main Vocal</h3>
+            <div class="card-container" id="main-vocal-card"></div>
+        </div>
+        <div class="position" id="visual">
+            <h3>Visual</h3>
+            <div class="card-container" id="visual-card"></div>
+        </div>
     </div>
 
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
