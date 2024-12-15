@@ -1,7 +1,7 @@
 // Player data (42 players)
 // Player data (42 contestants with actual names)
 const players = [
-  { name: "Lee Gaeun", id: 1 },
+  { name: "Park Juwon", id: 1 },
   { name: "Kim Jiwon", id: 2 },
   { name: "Park Seoyeon", id: 3 },
   { name: "Choi Jiwon", id: 4 },
