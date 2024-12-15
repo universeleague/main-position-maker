@@ -53,15 +53,10 @@ players.forEach(player => {
 
   const playerImage = document.createElement("img");
   playerImage.classList.add("table__entry-img");
-  playerImage.src = `assets/players/player${player.id}.png`;  // Dynamically use the player filename
+  playerImage.src = `assets/player${player.id}.png`;  // Dynamically use the player filename
   playerImage.alt = player.name;
 
-  const playerName = document.createElement("div");
-  playerName.classList.add("table__entry-text");
-  playerName.innerHTML = `<strong>${player.name}</strong>`;
-
   playerCard.appendChild(playerImage);
-  playerCard.appendChild(playerName);
   tableContainer.appendChild(playerCard);
 });
 
