@@ -1,80 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f8f8f8;
 }
 
-h1 {
-    margin: 20px 0;
+#top-banner {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.formation-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 15px;
-    width: 80%;
-    height: 400px; /* Adjust height as needed */
-    margin: 20px auto;
-    background-image: url('assets/field.png'); /* Set the background image */
-    background-size: cover; /* Ensure the image covers the entire field */
-    background-position: center; /* Center the image in the field */
-    border: 2px solid #aaa;
-    padding: 20px;
-    border-radius: 10px;
-    position: relative;
+#top-banner img {
+  width: 150px;
 }
 
-.drop-zone {
-    border: 2px dashed #aaa;
-    border-radius: 8px;
-    width: 120px;
-    height: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(255, 255, 255, 0.5);
+#top-banner p {
+  font-size: 24px;
+  font-weight: bold;
 }
 
-.player-pool {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin: 20px;
+.flex-container {
+  display: flex;
+  justify-content: space-around;
 }
 
-.player-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 10px;
-    width: 120px;
-    height: 160px;
-    cursor: grab;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+#table {
+  max-width: 300px;
+  overflow-y: auto;
 }
 
-.player-card img {
-    width: 120px;
-    height: 160px;
-    border-radius: 0%;
-    object-fit: cover;
+#table__filter-container {
+  margin-bottom: 15px;
 }
 
-.player-card p {
-    margin: 5px 0 0;
-    font-size: 14px;
-    font-weight: bold;
-    color: #333;
+#table__filter-input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
 }
 
-.player-card:active {
-    transform: scale(0.95);
+#table__entry-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.table__entry {
+  width: 80px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.table__entry:hover {
+  transform: scale(1.05);
+}
+
+.table__entry-img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.table__entry-text {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+#ranking__formation {
+  width: 300px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ranking__row {
+  margin-bottom: 20px;
+  min-height: 100px;
+  border: 2px dashed #ccc;
+  padding: 10px;
+}
+
+.ranking__entry {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 5px;
+  text-align: center;
+}
+
+.ranking__entry img {
+  width: 100%;
+  border-radius: 8px;
 }
