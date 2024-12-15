@@ -223,34 +223,6 @@ body {
   background-position: center center;
   background-origin: content-box;
 }
-/* Different entry borders */
-.r-rank-border {
-  border: 5px solid var(--r-rank);
-}
-.g-rank-border {
-  border: 5px solid var(--g-rank);
-}
-.b-rank-border {
-  border: 5px solid var(--b-rank);
-}
-.d-rank-border {
-  border: 5px solid var(--d-rank);
-}
-.f-rank-border {
-  border: 5px solid var(--f-rank);
-}
-.no-rank-border {
-  border: none;
-}
-.eliminated .table__entry-icon-border {
-  border: 5px solid var(--no-rank);
-}
-.eliminated .ranking__entry-icon-border {
-  border: 5px solid var(--no-rank);
-}
-.ranking__entry-icon-border.dragged-over { /* defines a border for when you drag over a trainee in ranking */
-  border: 5px solid var(--checked-blue);
-}
 
 .table__entry-text {
   margin: auto 5px auto 5px;
