@@ -13,10 +13,18 @@ h1 {
 .formation-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: 15px;
     width: 80%;
+    height: 400px; /* Adjust height as needed */
     margin: 20px auto;
+    background-image: url('assets/field.png'); /* Set the background image */
+    background-size: cover; /* Ensure the image covers the entire field */
+    background-position: center; /* Center the image in the field */
+    border: 2px solid #aaa;
     padding: 20px;
+    border-radius: 10px;
+    position: relative;
 }
 
 .drop-zone {
