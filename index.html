@@ -24,8 +24,7 @@
     <img id="banner-image" src="assets\logo_white.png"/>
     <p id="banner-title">UNIVERSE LEAGUE FORMATION MAKER</p>
     <p id="banner-subtitle">Choose your main positions!</p>
-  </div>
-  <div class="flex-container padded-box">
+   <div class="flex-container padded-box">
     <div>
       <div id="tooltip-container">
         <!-- add tool tip faq stuff here -->
@@ -35,7 +34,18 @@
           <input id="table__filter-input" oninput="filterTrainees(event)" type="text" placeholder="Search"/>
         </div>
         <div id="table__entry-container">
-          <!-- Entries will be dynamically loaded here -->
+          <!-- <div class="table__entry">
+            <div class="table__entry-icon">
+              <img class="table__entry-img" src="assets/trainees/LeeGaeun.png" />
+              <div class="table__entry-icon-border a-rank-border"></div>
+              <img class="table__entry-check" src="assets/check.png"/>
+            </div>
+            <div class="table__entry-text">
+              <strong><span class="name">Lee Gaeun</span></strong>
+              <span class="hangul">(이가은)</span>
+              <span class="company">PLEDIS ENTERTAINMENT</span>
+            </div>
+          </div> -->
         </div>
       </div>
       <div id="filters-container">
@@ -50,13 +60,16 @@
         </div>
       </div>
       <div id="sharelink-container">
+        <!-- button -->
         <input type="button" id="getlink-button" value="Get link" onclick="generateShareLink()"/>
+        <!-- text box -->
         <input type="text" placeholder="http://" id="getlink-textbox" readonly/>
+        <!-- button in text box -->
         <input type="button" id="copylink-button" value="Copy" onclick="copyLink()"/>
       </div>
     </div>
     <div id="ranking__pyramid">
-      <div id="ranking__title"><strong>TOP 7</strong></div>
+      <div id="ranking__title"><strong>MAIN POSITIONS</strong></div>
       <div class="formation-field">
         <div class="formation-row">
           <div class="formation-entry" id="formation-entry-1">
