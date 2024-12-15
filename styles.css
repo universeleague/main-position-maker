@@ -164,8 +164,8 @@ body {
   background-color: #f0f0f0;
 }
 .table__entry-icon {
-  border-radius: 50%;
-  width: 60px;
+  border-radius: 4px;
+  width: 42.84px;
   height: 60px;
   margin: 6px 8px;
   display: block;
@@ -175,9 +175,9 @@ body {
   background-size: 60px; */
 }
 .table__entry-img {
-  border-radius: 50%;
   width: inherit;
   height: inherit;
+  border-radius: 4px;
 }
 .eliminated .table__entry-img {
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
@@ -190,7 +190,6 @@ body {
   left: 0;
   width: inherit;
   height: inherit;
-  border-radius: 50%;
   /* blue background */
   background-color: var(--checked-blue);
   /* the padding insets the checkbox (makes it bigger/smaller) */
@@ -203,7 +202,7 @@ body {
   left: 0;
   width: inherit;
   height: inherit;
-  border-radius: 50%;
+
   box-sizing: border-box;
 }
 .table__entry-icon-crown, .ranking__entry-icon-crown {
@@ -260,24 +259,85 @@ body {
 .table__entry-text .name {
   font-size: 12px;
   color: var(--name-gray);
-}
-.table__entry .hangul {
-  font-size: 12px;
-  color: var(--other-name-gray);
-}
-.table__entry .companyandyear {
-  font-size: 10px;
-  color: var(--affil-gray);
-  display: block;
-}
 
 /* Ranking Styles */
 #ranking__pyramid {
-  /* min-width: 350px; */
+  min-width: 350px;
   margin: 40px 40px 10px 40px;
   display: flex;
   flex-direction: column;
+  background-color: #3c9d32; /* Field background color */
+  position: relative;
+  border-radius: 10px;
+  padding: 40px;
+  box-sizing: border-box;
+  background-image: linear-gradient(180deg, #4eab3b 20%, #3c9d32 100%);
 }
+#ranking__pyramid::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid white; /* Border for the field */
+  border-radius: 10px;
+}
+
+#ranking__pyramid .field-line {
+  position: absolute;
+  background-color: white;
+}
+
+#ranking__pyramid .goal-line {
+  top: 10%;
+  left: 0;
+  width: 100%;
+  height: 5%;
+}
+
+#ranking__pyramid .center-circle {
+  width: 15%;
+  height: 15%;
+  border-radius: 50%;
+  border: 2px solid white;
+  top: 42.5%;
+  left: 42.5%;
+}
+
+#ranking__pyramid .center-spot {
+  width: 6px;
+  height: 6px;
+  background-color: white;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#ranking__pyramid .penalty-area {
+  top: 10%;
+  width: 10%;
+  height: 15%;
+  border: 2px solid white;
+}
+
+#ranking__pyramid .half-line {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+}
+
+#ranking__title {
+  text-align: center;
+  font-size: 24px;
+  color: white;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+}
+	
 #ranking__title {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
@@ -289,8 +349,9 @@ body {
 }
 .ranking__entry-view {
   position: relative;
-  width: 60px;
+  width: 42.84px;
   height: 60px;
+  border-radius: 4px;
   margin: 10px 24px 8px 24px;
 }
 .ranking__entry-icon {
@@ -309,15 +370,6 @@ body {
 .eliminated .ranking__entry-img {
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
-}
-.ranking__entry-icon-border {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: inherit;
-  height: inherit;
-  border-radius: 50%;
-  box-sizing: border-box;
 }
 .ranking__entry-icon-badge {
   position: absolute;
@@ -343,6 +395,7 @@ body {
   text-align: center;
 }
 
+
 /* Styles for different badge colors */
 .bg-no {
   background-color: var(--no-rank);
@@ -366,12 +419,6 @@ body {
   background-color: var(--no-rank);
 }
 
-.ranking__entry .company {
-  color: var(--ranking-affil-gray);
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
-  font-size: 9px;
-  letter-spacing: 0.2px;
 }
 
 /* Generic Styles */
